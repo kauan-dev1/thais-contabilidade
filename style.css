@@ -268,7 +268,7 @@ h1 {
 h2 {
   margin-bottom: 18px;
   font-size: clamp(2.1rem, 4.8vw, 4.35rem);
-  line-height: 0.98;
+  line-height: 1.06;
 }
 
 h3 {
@@ -807,6 +807,20 @@ textarea {
     transition: opacity 220ms var(--ease), transform 220ms var(--ease);
   }
 
+  .nav a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    color: var(--surface);
+    background: oklch(100% 0 0 / 0.07);
+  }
+
+  .nav a:hover,
+  .nav a:focus-visible {
+    color: var(--white);
+    background: oklch(100% 0 0 / 0.15);
+  }
+
   .nav.is-open {
     opacity: 1;
     transform: translateY(0);
@@ -877,6 +891,22 @@ textarea {
     padding-top: 44px;
   }
 
+  h1 {
+    font-size: clamp(2.65rem, 13vw, 3.72rem);
+    line-height: 1.16;
+    letter-spacing: -0.018em;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 2.9rem);
+    line-height: 1.14;
+    letter-spacing: -0.018em;
+  }
+
+  .section-heading {
+    max-width: 100%;
+  }
+
   .hero__actions,
   .button {
     width: 100%;
@@ -887,33 +917,52 @@ textarea {
   }
 
   .desk {
-    min-height: 440px;
+    width: 100%;
+    min-height: 430px;
+    justify-self: stretch;
+    overflow: hidden;
+    border-radius: 28px;
+  }
+
+  .desk::before {
+    inset: 26px;
   }
 
   .spreadsheet-card {
-    width: 82%;
-    left: 8%;
-    top: 36px;
+    width: calc(100% - 56px);
+    min-height: 230px;
+    left: 28px;
+    top: 42px;
+    padding: 16px;
   }
 
   .receipt-card {
-    width: 170px;
-    right: 5%;
-    bottom: 42px;
+    width: min(45%, 168px);
+    right: 28px;
+    bottom: 58px;
+    padding: 20px;
   }
 
   .tax-guide-card {
-    width: 158px;
-    left: 5%;
-    bottom: 36px;
+    width: min(42%, 156px);
+    left: 28px;
+    bottom: 50px;
+    padding: 18px;
   }
 
   .stamp {
-    right: 50%;
-    top: 188px;
-    padding: 11px 14px 10px;
-    font-size: clamp(1.18rem, 6.6vw, 1.72rem);
-    transform: translateX(50%) rotate(-8deg);
+    left: 50%;
+    right: auto;
+    top: 180px;
+    width: min(300px, calc(100% - 64px));
+    max-width: none;
+    padding: 9px 10px 8px;
+    border-width: 3px;
+    font-size: clamp(0.95rem, 4.8vw, 1.25rem);
+    letter-spacing: 0;
+    text-align: center;
+    transform: translateX(-50%) rotate(-4deg);
+    z-index: 2;
   }
 
   .contact-form {
@@ -939,12 +988,51 @@ textarea {
     width: calc(100% - 16px);
   }
 
+  .desk {
+    min-height: 410px;
+    border-radius: 24px;
+  }
+
+  .desk::before {
+    inset: 20px;
+  }
+
+  .spreadsheet-card {
+    width: calc(100% - 42px);
+    min-height: 210px;
+    left: 21px;
+    top: 38px;
+  }
+
+  h1 {
+    font-size: clamp(2.32rem, 12vw, 3.08rem);
+    line-height: 1.18;
+  }
+
+  h2 {
+    font-size: clamp(1.82rem, 9.4vw, 2.45rem);
+    line-height: 1.16;
+  }
+
   .receipt-card {
-    width: 154px;
+    width: 148px;
+    right: 20px;
+    bottom: 52px;
+    padding: 18px;
   }
 
   .tax-guide-card {
-    width: 142px;
+    width: 140px;
+    left: 20px;
+    bottom: 46px;
+    padding: 18px;
+  }
+
+  .stamp {
+    top: 172px;
+    width: min(260px, calc(100% - 46px));
+    padding: 8px 9px 7px;
+    font-size: clamp(0.84rem, 4.5vw, 1.02rem);
   }
 }
 

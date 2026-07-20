@@ -918,7 +918,7 @@ textarea {
 
   .desk {
     width: 100%;
-    min-height: 430px;
+    min-height: 450px;
     justify-self: stretch;
     overflow: hidden;
     border-radius: 28px;
@@ -939,34 +939,36 @@ textarea {
   .receipt-card {
     width: min(45%, 168px);
     right: 28px;
-    bottom: 58px;
+    bottom: 48px;
     padding: 20px;
+    z-index: 2;
   }
 
   .tax-guide-card {
     width: min(42%, 156px);
     left: 28px;
-    bottom: 50px;
+    bottom: 44px;
     padding: 18px;
+    z-index: 2;
   }
 
   .stamp {
     left: 50%;
     right: auto;
-    top: 174px;
-    width: min(228px, calc(100% - 104px));
-    max-width: 228px;
+    top: 154px;
+    width: clamp(174px, 54%, 228px);
+    max-width: calc(100% - 76px);
     min-height: 48px;
     display: grid;
     place-items: center;
     padding: 8px 10px 7px;
     border-width: 3px;
-    font-size: clamp(0.78rem, 3.75vw, 0.98rem);
+    font-size: clamp(0.78rem, 3.45vw, 0.95rem);
     letter-spacing: 0;
     text-align: center;
     overflow: hidden;
     transform: translateX(-50%) rotate(-2deg);
-    z-index: 4;
+    z-index: 3;
   }
 
   .contact-form {
@@ -993,7 +995,7 @@ textarea {
   }
 
   .desk {
-    min-height: 410px;
+    min-height: 430px;
     border-radius: 24px;
   }
 
@@ -1021,24 +1023,24 @@ textarea {
   .receipt-card {
     width: 148px;
     right: 20px;
-    bottom: 52px;
+    bottom: 44px;
     padding: 18px;
   }
 
   .tax-guide-card {
     width: 140px;
     left: 20px;
-    bottom: 46px;
+    bottom: 40px;
     padding: 18px;
   }
 
   .stamp {
-    top: 166px;
-    width: min(202px, calc(100% - 86px));
-    max-width: 202px;
+    top: 142px;
+    width: clamp(164px, 55%, 202px);
+    max-width: calc(100% - 62px);
     min-height: 44px;
     padding: 7px 8px 6px;
-    font-size: clamp(0.72rem, 3.55vw, 0.86rem);
+    font-size: clamp(0.7rem, 3.25vw, 0.82rem);
   }
 }
 

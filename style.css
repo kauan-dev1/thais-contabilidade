@@ -953,16 +953,20 @@ textarea {
   .stamp {
     left: 50%;
     right: auto;
-    top: 180px;
-    width: min(300px, calc(100% - 64px));
-    max-width: none;
-    padding: 9px 10px 8px;
+    top: 174px;
+    width: min(228px, calc(100% - 104px));
+    max-width: 228px;
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+    padding: 8px 10px 7px;
     border-width: 3px;
-    font-size: clamp(0.95rem, 4.8vw, 1.25rem);
+    font-size: clamp(0.78rem, 3.75vw, 0.98rem);
     letter-spacing: 0;
     text-align: center;
-    transform: translateX(-50%) rotate(-4deg);
-    z-index: 2;
+    overflow: hidden;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: 4;
   }
 
   .contact-form {
@@ -1029,10 +1033,12 @@ textarea {
   }
 
   .stamp {
-    top: 172px;
-    width: min(260px, calc(100% - 46px));
-    padding: 8px 9px 7px;
-    font-size: clamp(0.84rem, 4.5vw, 1.02rem);
+    top: 166px;
+    width: min(202px, calc(100% - 86px));
+    max-width: 202px;
+    min-height: 44px;
+    padding: 7px 8px 6px;
+    font-size: clamp(0.72rem, 3.55vw, 0.86rem);
   }
 }
 
